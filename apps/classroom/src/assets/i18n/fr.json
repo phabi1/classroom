@@ -19,5 +19,10 @@
         "submit": "Générer"
       }
     }
+  },
+  "tools": {
+    "page": {
+      "title": "Boite à outils"
+    }
   }
 }

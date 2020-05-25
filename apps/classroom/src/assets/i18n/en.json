@@ -19,5 +19,10 @@
 				"submit": ""
 			}
 		}
+	},
+	"tools": {
+		"page": {
+			"title": ""
+		}
 	}
 }

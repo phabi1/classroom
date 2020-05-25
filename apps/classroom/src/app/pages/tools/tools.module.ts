@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToolsRoutingModule } from './tools-routing.module';
-import { PageComponent } from './containers/page/page.component';
+import { NgModule } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
+import { TranslateModule } from '@ngx-translate/core';
+import { PageComponent } from './containers/page/page.component';
+import { ToolsRoutingModule } from './tools-routing.module';
 
 @NgModule({
   declarations: [PageComponent],
-  imports: [CommonModule, MatListModule, ToolsRoutingModule],
+  imports: [CommonModule, MatListModule, TranslateModule, ToolsRoutingModule],
 })
 export class ToolsModule {}
