@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { TranslateModule } from '@ngx-translate/core';
 import { PageComponent } from './containers/page/page.component';
 import { ToolsDaysofmonthRoutingModule } from './tools-daysofmonth-routing.module';
 
@@ -22,6 +23,7 @@ import { ToolsDaysofmonthRoutingModule } from './tools-daysofmonth-routing.modul
     MatProgressSpinnerModule,
     MatSelectModule,
     FlexLayoutModule,
+    TranslateModule,
     ToolsDaysofmonthRoutingModule,
   ],
 })

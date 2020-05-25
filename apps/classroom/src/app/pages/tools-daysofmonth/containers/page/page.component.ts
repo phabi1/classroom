@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'classroom-tools-daysofmonth-page',
@@ -65,15 +65,28 @@ export class PageComponent implements OnInit {
     this.form = formBuilder.group({
       month: [null, Validators.required],
       year: [null, Validators.required],
-      excludedDays: [null],
+      excludedDays: [
+        null,
+        Validators.pattern(/\d+(?:-\d+)?(?:,\d+(?:-\d+)?)*/),
+      ],
     });
   }
 
   ngOnInit(): void {}
 
   generate() {
+    let headers = new HttpHeaders();
+    headers = headers.set('Accept', 'application/pdf');
     this.httpClient
-      .post('/api/daysofmonth/generate', this.form.value)
-      .subscribe(() => {});
+      .post<Blob>('/api/daysofmonth/generate', this.form.value, {
+        responseType: 'blob' as 'json',
+        headers: headers,
+      })
+      .subscribe((val) => this.createPdfFromBlob(val));
+  }
+
+  createPdfFromBlob(blob: Blob) {
+    const downloadURL = URL.createObjectURL(blob);
+    window.open(downloadURL);
   }
 }

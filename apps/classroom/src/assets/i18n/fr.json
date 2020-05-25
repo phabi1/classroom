@@ -1,0 +1,23 @@
+{
+  "toolsDaysofMonth": {
+    "page": {
+      "title": "Jours du mois"
+    },
+    "form": {
+      "fields": {
+        "month": {
+          "placeholder": "Mois"
+        },
+        "year": {
+          "placeholder": "Année"
+        },
+        "excludedDays": {
+          "placeholder": "Jour à exclure"
+        }
+      },
+      "buttons": {
+        "submit": "Générer"
+      }
+    }
+  }
+}

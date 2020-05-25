@@ -1,27 +1,40 @@
-<h1>Days of month</h1>
+<h1>{{ 'toolsDaysofMonth.page.title' | translate }}</h1>
 <form [formGroup]="form" (ngSubmit)="generate()">
   <div fxLayout="row" fxLayoutGap="16px">
     <mat-form-field>
-      <mat-select placeholder="Month" formControlName="month">
+      <mat-select
+        [placeholder]="
+          'toolsDaysofMonth.form.fields.month.placeholder' | translate
+        "
+        formControlName="month"
+      >
         <mat-option *ngFor="let month of months" [value]="month.data">
           {{ month.label }}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Year" formControlName="year" />
+      <input
+        matInput
+        [placeholder]="
+          'toolsDaysofMonth.form.fields.year.placeholder' | translate
+        "
+        formControlName="year"
+      />
     </mat-form-field>
   </div>
   <div>
     <mat-form-field>
       <input
         matInput
-        placeholder="Excluded days"
+        [placeholder]="
+          'toolsDaysofMonth.form.fields.excludedDays.placeholder' | translate
+        "
         formControlName="excludedDays"
       />
     </mat-form-field>
   </div>
   <button mat-raised-button color="primary" [disabled]="form.invalid">
-    Generate
+    {{ 'toolsDaysofMonth.form.buttons.submit' | translate }}
   </button>
 </form>

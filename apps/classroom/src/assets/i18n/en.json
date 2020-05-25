@@ -1,0 +1,23 @@
+{
+	"toolsDaysofMonth": {
+		"page": {
+			"title": ""
+		},
+		"form": {
+			"fields": {
+				"month": {
+					"placeholder": ""
+				},
+				"year": {
+					"placeholder": ""
+				},
+				"excludedDays": {
+					"placeholder": ""
+				}
+			},
+			"buttons": {
+				"submit": ""
+			}
+		}
+	}
+}

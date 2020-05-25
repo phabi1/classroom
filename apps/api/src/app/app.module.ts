@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { join } from 'path';
+import { DaysofmonthModule } from './daysofmonth/daysofmonth.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { join } from 'path';
       rootPath: join(__dirname, '..', 'classroom'),
       exclude: ['/api*'],
     }),
+    DaysofmonthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
