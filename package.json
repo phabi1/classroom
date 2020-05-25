@@ -2,6 +2,9 @@
   "name": "classroom",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "12.14.1"
+  },
   "scripts": {
     "ng": "ng",
     "nx": "nx",
