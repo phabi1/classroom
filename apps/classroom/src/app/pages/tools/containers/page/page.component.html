@@ -1,1 +1,10 @@
-<p>page works!</p>
+<h1>Toolbox</h1>
+<mat-nav-list>
+  <a
+    mat-list-item
+    [routerLink]="['tools', item.link]"
+    *ngFor="let item of items$ | async"
+  >
+    {{ item.title }}
+  </a>
+</mat-nav-list>

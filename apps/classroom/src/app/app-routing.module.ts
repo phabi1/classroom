@@ -7,6 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/tools/tools.module').then((m) => m.ToolsModule),
   },
+  {
+    path: 'tools/daysofmonth',
+    loadChildren: () =>
+      import('./pages/tools-daysofmonth/tools-daysofmonth.module').then(
+        (m) => m.ToolsDaysofmonthModule
+      ),
+  },
 ];
 
 @NgModule({

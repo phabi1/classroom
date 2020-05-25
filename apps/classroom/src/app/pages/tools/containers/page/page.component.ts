@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Tool } from '../../models/tool.model';
 
 @Component({
   selector: 'classroom-page',
   templateUrl: './page.component.html',
-  styleUrls: ['./page.component.css']
+  styleUrls: ['./page.component.css'],
 })
 export class PageComponent implements OnInit {
+  items$: Observable<Tool[]>;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.items$ = of([
+      {
+        title: 'Days of month',
+        link: 'daysofmonth',
+      },
+    ]);
   }
-
 }
