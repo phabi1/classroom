@@ -15,7 +15,7 @@ export class PageComponent implements OnInit {
   ngOnInit(): void {
     this.items$ = of([
       {
-        title: 'Days of month',
+        title: 'Calendrier du mois',
         link: 'daysofmonth',
       },
     ]);
